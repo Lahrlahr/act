@@ -1,11 +1,39 @@
 import pathlib
 
 ### Task parameters
-DATA_DIR = '<put your data dir here>'
+DATA_DIR = 'datas'
 SIM_TASK_CONFIGS = {
+    'sim_agilex': {
+        'dataset_dir': '/data/huangguang/data',
+        'num_episodes': 97,  # 0-96
+        'episode_len': 400,  # eval用到
+        'camera_names': ['top', 'left', 'right']
+    },
+
+    'sim_hold_cup': {
+        'dataset_dir': '/data/huangguang/data1/ario/hold_cup',
+        'num_episodes': 97,  # 无
+        'episode_len': 400,  # eval用到
+        'camera_names': ['top', 'left', 'right'] # 无
+    },
+
+    'sim_pick_pen': {
+        'dataset_dir': '/data/share_nips/robot/aidlux',
+        'num_episodes': 97,  # 无
+        'episode_len': 400,  # eval用到
+        'camera_names': ['top', 'left', 'right'] # 无
+    },
+
+    'sim_hold_cup1': {
+        'dataset_dir': '/data/share_nips/robot/ario1/put_the_pen_into_the_pen_holder',
+        'num_episodes': 97,  # 无
+        'episode_len': 400,  # eval用到
+        'camera_names': ['top', 'left', 'right'] # 无
+    },
+
     'sim_transfer_cube_scripted':{
         'dataset_dir': DATA_DIR + '/sim_transfer_cube_scripted',
-        'num_episodes': 50,
+        'num_episodes': 10,
         'episode_len': 400,
         'camera_names': ['top']
     },

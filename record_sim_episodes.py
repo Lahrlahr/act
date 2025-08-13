@@ -141,7 +141,7 @@ def main(args):
         # because the replaying, there will be eps_len + 1 actions and eps_len + 2 timesteps
         # truncate here to be consistent
         joint_traj = joint_traj[:-1]
-        episode_replay = episode_replay[:-1]
+        episode_replay = episode_replay[:-1]#todo 应该是[1:]
 
         # len(joint_traj) i.e. actions: max_timesteps
         # len(episode_replay) i.e. time steps: max_timesteps + 1
